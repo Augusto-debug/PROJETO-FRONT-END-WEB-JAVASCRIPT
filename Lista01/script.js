@@ -18,10 +18,11 @@ window.addEventListener("DOMContentLoaded", () => {
             return idade;
         }
     })}</p>`);
-    document.writeln(`As idades maiores de 18 anos são ${idades.filter((idade) => {
+    document.writeln(`Todos são maiores de idade ? ${idades.every((idade) => {
         if (idade >= 18) {
-            return idade;
+            return true;
         }
+        return false;
     })}`);
     let idadeDigitada = parseInt(prompt("Digite uma idade: "));
     const todasMaioresOuIguais = idades.every(idade => idade >= idadeDigitada);
